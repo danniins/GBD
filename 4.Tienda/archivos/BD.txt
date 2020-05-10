@@ -1,0 +1,107 @@
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+USE `mydb` ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`usuario`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`usuario` (
+  `dni` INT NOT NULL,
+  `nombre` VARCHAR(45) NOT NULL,
+  `apellidos` VARCHAR(255) NOT NULL,
+  `fecha-nacimiento` DATE NOT NULL,
+  `telefono` INT NOT NULL,
+  `provincia` VARCHAR(45) NOT NULL,
+  `localidad` VARCHAR(45) NOT NULL,
+  `cod-postal` INT NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `passwd` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`dni`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`rol`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`rol` (
+  `cod-rol` INT NOT NULL,
+  `descripcion` VARCHAR(45) NOT NULL,
+  `usuario_dni` INT NOT NULL,
+  PRIMARY KEY (`cod-rol`, `usuario_dni`),
+  INDEX `fk_rol_usuario_idx` (`usuario_dni` ASC) VISIBLE,
+  CONSTRAINT `fk_rol_usuario`
+    FOREIGN KEY (`usuario_dni`)
+    REFERENCES `mydb`.`usuario` (`dni`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`pedidos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`pedidos` (
+  `idpedido` INT NOT NULL,
+  `total` VARCHAR(45) NOT NULL,
+  `stado` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idpedido`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`realiza`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`realiza` (
+  `usuario_dni` INT NOT NULL,
+  `pedidos_idpedido` INT NOT NULL,
+  `fecha` DATE NOT NULL,
+  `forma-pago` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`usuario_dni`, `pedidos_idpedido`),
+  INDEX `fk_usuario_has_pedidos_pedidos1_idx` (`pedidos_idpedido` ASC) VISIBLE,
+  INDEX `fk_usuario_has_pedidos_usuario1_idx` (`usuario_dni` ASC) VISIBLE,
+  CONSTRAINT `fk_usuario_has_pedidos_usuario1`
+    FOREIGN KEY (`usuario_dni`)
+    REFERENCES `mydb`.`usuario` (`dni`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_usuario_has_pedidos_pedidos1`
+    FOREIGN KEY (`pedidos_idpedido`)
+    REFERENCES `mydb`.`pedidos` (`idpedido`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`producto`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`producto` (
+  `id-producto` INT NOT NULL,
+  `nombre` VARCHAR(255) NOT NULL,
+  `precio` INT NOT NULL,
+  `descripcion` VARCHAR(255) NOT NULL,
+  `imagen` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id-producto`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`linea-pedidos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`linea-pedidos` (
+  `producto_id-producto` INT NOT NULL,
+  `pedidos_idpedido` INT NOT NULL,
+  `cantidad` INT NOT NULL,
+  PRIMARY KEY (`producto_id-producto`, `pedidos_idpedido`),
+  INDEX `fk_producto_has_pedidos_pedidos1_idx` (`pedidos_idpedido` ASC) VISIBLE,
+  INDEX `fk_producto_has_pedidos_producto1_idx` (`producto_id-producto` ASC) VISIBLE,
+  CONSTRAINT `fk_producto_has_pedidos_producto1`
+    FOREIGN KEY (`producto_id-producto`)
+    REFERENCES `mydb`.`producto` (`id-producto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_producto_has_pedidos_pedidos1`
+    FOREIGN KEY (`pedidos_idpedido`)
+    REFERENCES `mydb`.`pedidos` (`idpedido`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;

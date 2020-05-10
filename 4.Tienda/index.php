@@ -1,9 +1,11 @@
 <?php
+///INCLUIMOS LÁS DEMÁS PÁGINAS PARA EL CORRECTO FUNCIONAMIENTO
 include 'global/config.php';
 include 'global/conexion.php';
 include './carrito.php';
 include 'templates/cabecera.php';
 ?>
+<!-- CÓDIGO DE LA PÁGINA PRINCIPAL DE MI TIENDA -->
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
                 Utilizamos cookies propias y de terceros para obtener datos estadísticos de la navegación de nuestros usuarios y mejorar nuestros servicios. Si acepta o continúa navegando, consideramos que acepta su uso. Puede cambiar la configuración.
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -147,5 +149,6 @@ include 'templates/cabecera.php';
             })
         </script>
 <?php
-include 'templates/pie.php';
+///INCLUIMOS EL FOOTER COMO EN LAS OTRAS PÁGINAS VISUALIZABLES
+	include 'templates/pie.php';
 ?>

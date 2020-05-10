@@ -1,0 +1,69 @@
+https://formulariophpdaniel.000webhostapp.com/
+
+BaseDatos:id12493010_tienda{
+	id12493010_usuario
+	User_1234_base
+	}
+Producto1:
+	Piercing Tragus
+	5.00
+	Tragus plata de ley de Hirokata para el cartilago externo del canal auditivo
+	https://cdn.crazy-factory.com/product_images/Z-MLB/Z-MLB12123_L-Piercings-Esterilizado-Piercings-Labret-esterilizado.JPG?dt=1495699814
+Producto2:
+	Piercing Hélix
+	10.00
+	Piercing Hélix de acero con forma de clave de sol para el cartilago exterior de la oreja disponible en varios colores.
+	https://www.piercinghouse.com/6297-thickbox_default/piercing-helix-clave.jpg
+Producto3:		
+	Kit Piercing anti-hélix
+	15.00
+	Kit de 8 piercings anti-hélix de acero bañado en oro con retoques de bisutería.
+	https://images-na.ssl-images-amazon.com/images/I/61lgu1y5EUL._AC_UY500_.jpg
+Product4:
+	Piercing Industrial
+	7.00
+	Piercing industrial de plata de ley con detalle de flor en el centro.
+	https://www.piercinghouse.com/6110/piercing-industrial-flor-con-centro-opal.jpg
+Producto5:
+	Piercing Industrial
+	7.00
+	Piercing industrial de plata de ley con detalle de serpiente a lo largo del piercing.
+	https://www.defectolatino.com/media/catalog/product/cache/4/image/600x600/9df78eab33525d08d6e5fb8d27136e95/p/i/piercing_conch_in_acciaio_1.jpg
+Producto6:
+	Piercing Conch
+	7.00
+	Piercing Conch de plata de ley redondo con pestillo recto con acabado de bolas.
+	https://www.defectolatino.com/media/catalog/product/cache/4/image/600x600/9df78eab33525d08d6e5fb8d27136e95/p/i/piercing_conch_in_acciaio_1.jpg
+Producto7:
+	Piercing Daith
+	10.00
+	Kit de 6 Piercing Daith de acero bañado en oro con formas y acabados de bisuteria.
+	https://images-na.ssl-images-amazon.com/images/I/71nUkjDwEoL._AC_UY395_.jpg
+Producto8:		
+	Piercing Snug
+	10.00
+	Kit de 3 Piercing Snug de acero con distintos colores con forma de anillo y acabados de bisutería.
+	https://global2019-static-cdn.kikuu.com/upload-productImg-16046016448456025_320_234.jpg?
+Producto9:
+	Piercing Rook
+	10.00
+	Kit de 6 Piercing Rook de acero bañado en oro con forma semiesfera y con detalles de bisutería.
+	https://m.media-amazon.com/images/I/41sHQxAL8YL.jpg
+Producto10:
+	Piercing Anti-tragus
+	10.00
+	Piercing Anti-Tragus de oro de ley con forma esférica y con acabado de punta de flecha.
+	https://www.chic-net.de/bilder/kategorien/Anti-Tragus-Piercing.jpg
+Producto11:
+	Piercing Septum
+	7.00
+	Piercing Septum de acero con forma semi-circular con detalles de calaveras.
+	https://contestimg.wish.com/api/webimage/5a5f32c9a2ef5561dcab387f-large.jpg?cache_buster=a373616019918d1dbd4a9d4f1fd4026b
+Producto12:
+	Piercing Viper
+	15.00
+	Kit de 10 Piercing Viper de acero con diferentes colores pala lengua.
+	https://images-na.ssl-images-amazon.com/images/I/61pZJ7NbCNL._AC_UL1500_.jpg
+	
+	
+	
