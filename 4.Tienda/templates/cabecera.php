@@ -34,7 +34,14 @@
 			  		</li>
 			  		<li class="nav-item">
 			    		<a class="nav-link text-warning" href="./mostrarCarrito.php">Carrito(<?php echo (empty($_SESSION['carrito']))?0:count($_SESSION['carrito']);?>)</a>
-			  		</li>
+					  </li>
+					<?php
+						error_reporting(0);	
+						if ($_SESSION["usuario"]=="admin@gmail.com"){?>
+							<li class="nav-item">
+								<a class="nav-link text-warning" href="./admin.php">Administrar Tienda</a>
+							</li>
+				<?php 	}else{?> <div></div> <?php 	} ?>
                 </ul>
                 <h1 class="pl-5 text-warning">Asgard ~ Piercing ~ Shop</h1>
 			</div>

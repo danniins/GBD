@@ -37,7 +37,7 @@ include 'templates/cabecera.php';
                                 <span><?php echo $producto['nombre'];?></span>
                                 <h5 class="card-title"><?php echo $producto['precio'];?>€</h5>
                                 <form action="" method="post">
-                                    <input type="hidden" name="id-producto" id="id-producto" value="<?php echo openssl_encrypt($producto['id-producto'],COD,KEY);?>">
+                                    <input type="hidden" name="id_producto" id="id_producto" value="<?php echo openssl_encrypt($producto['id_producto'],COD,KEY);?>">
                                     <input type="hidden" name="nombre" id="nombre" value="<?php echo openssl_encrypt($producto['nombre'],COD,KEY);?>">
                                     <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($producto['precio'],COD,KEY);?>">
                                     <label>Cantidad: </label>

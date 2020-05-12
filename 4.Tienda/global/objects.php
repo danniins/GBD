@@ -18,10 +18,14 @@
 		}
 		public function botonLogout(){
 			?>
-			<form method="POST" action="">
+			<form method="POST" action="index.php">
+				<span class="text-warning"><?php echo $_SESSION['usuario'];?></span>
 				<button type="submit" name="logout" value="logout" class="btn btn-warning text-dark mr-1">
 					Cerrar sesión
 				</button></form><?php
 		}
+		public function selectProducto(){
+		}
+
 	}
 ?>

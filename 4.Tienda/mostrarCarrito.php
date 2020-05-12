@@ -32,7 +32,7 @@ include 'templates/cabecera.php';
                 <td width="20%" class="text-center">€<?php echo number_format($producto['PRECIO']*$producto['CANTIDAD'],2); ?></td>
                 <td width="5%">
                     <form method="post" action="">
-                        <input type="hidden" name="id-producto" value="<?php echo openssl_encrypt($producto['ID-PRODUCTO'],COD,KEY);?>">
+                        <input type="hidden" name="id_producto" value="<?php echo openssl_encrypt($producto['ID_PRODUCTO'],COD,KEY);?>">
                         <button class="btn btn-danger" type="submit" name="btnAction" value="eliminar">Eliminar</button>
                     </form>
                 </td>
