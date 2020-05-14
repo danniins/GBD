@@ -72,6 +72,8 @@ if(!isset($_SESSION)){
                     }
                 }else{$mensaje.="Upps... ID incorrecto"."<br>";}
             break;
+            ///Con diferentes values de los botones creamos diferentes códigos para cada value
+            ///Este codigo saca el producto de la BD, eliminandolo por completo
             case "sacar_producto":
                 try {
                     $id_producto=$_POST['id_producto'];

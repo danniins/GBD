@@ -1,4 +1,9 @@
 https://formulariophpdaniel.000webhostapp.com/
+
+BaseDatos:id12493010_tienda{
+	id12493010_usuario
+	User_1234_base
+	}
 Producto1:
 	Piercing Tragus
 	5.00

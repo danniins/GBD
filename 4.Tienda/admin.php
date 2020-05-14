@@ -31,7 +31,8 @@ include 'templates/cabecera.php';
                    $select->execute();
                    $listaProductos=$select->fetchAll(PDO::FETCH_ASSOC);
                 ?>
-                <!-- CREAMOS UN BUCLE PARA QUE CREE TANTAS CELDAS COMO PRODUCTOS HAYA EN NUESTRA TABLA -->
+                <!-- CREAMOS UN BUCLE PARA QUE CREE TANTAS CELDAS COMO PRODUCTOS HAYA EN NUESTRA TABLA CON LA OPCIÓN INPUT PARA MODIFICAR LOS DATOS-->
+
             <?php foreach($listaProductos as $producto){ ?>
             <tr>
                 <form method="post" action="">
@@ -50,6 +51,7 @@ include 'templates/cabecera.php';
             </tr>
             <?php }?> 
             <tr>
+            <!-- Creamos un botón Modal para insertar datos en la BD -->
                 <td colspan="5">
                     <button type="button" class="btn btn-success btn-lg btn-block text-dark" data-toggle="modal" data-target="#insert">Insertar Producto</button>
                     <div class="modal fade" id="insert" tabindex="-1" role="dialog" aria-hidden="true">

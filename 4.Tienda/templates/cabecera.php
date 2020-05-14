@@ -35,6 +35,7 @@
 			  		<li class="nav-item">
 			    		<a class="nav-link text-warning" href="./mostrarCarrito.php">Carrito(<?php echo (empty($_SESSION['carrito']))?0:count($_SESSION['carrito']);?>)</a>
 					  </li>
+					  <!-- Comprovación del usuario admin -->
 					<?php
 						error_reporting(0);	
 						if ($_SESSION["usuario"]=="admin@gmail.com"){?>
